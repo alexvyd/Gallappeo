@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Викторина по географии</string>
+    <string name="false_button">Вранье</string>
+    <string name="true_button">Правда</string>
+    <string name="next_button">Дальше</string>
+    <string name="prev_button">Назад</string>
+    <string name="cheat_button">Подсказка</string>
+    <string name="warning_text">У вас осталось подсказок: </string>
+    <string name="show_help_button">Показать</string>
+    <string name="cancel_help_button">Вернуться</string>
+    <string name="correct_toast">Верно!</string>
+    <string name="incorrect_toast">Неверно!</string>
+    <string name="question_australia">Каннбера - столица Австралии</string>
+    <string name="question_oceans">Тихий океан больше, чем Атлантический</string>
+    <string name="question_mideast">Суэцкий канал соединяет Красное море и Индийский океан</string>
+    <string name="question_africa">Истоки Нила находятся в Египте</string>
+    <string name="question_americas">Амазонка самая протяженная река в Америках</string>
+    <string name="question_asia">Байкал - старейшее и глубочайшее пресное озеро в мире</string>
+</resources>
