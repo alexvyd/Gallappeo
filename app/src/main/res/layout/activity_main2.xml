@@ -36,5 +36,13 @@
             android:layout_height="wrap_content"
             android:text="@string/cancel_help_button"/>
         </LinearLayout>
+
+    <TextView
+        android:id="@+id/sdk_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:text="SDK Version"/>
+
     </LinearLayout>
 

@@ -1,5 +1,6 @@
 package com.vydrin.gallappeo;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Кнопка подсказки
         mHelpButton = (Button)findViewById(R.id.cheat_button);
         mHelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,12 +126,34 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent, REQUEST_CODE_CHEAT);
             }
         });
-
-
+        if(mHelpCounter == 0) {
+            mHelpButton.setEnabled(false);
+        }
 
         //Вывод первого вопроса
         updateQuestion();
+    } //onCreate
+
+    //Возвращение результата от дочерней активности
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode != Activity.RESULT_OK) {
+            return;
+        }
+        if (requestCode == REQUEST_CODE_CHEAT) {
+            if (data == null) {
+                return;
+            }
+            if(Main2Activity.wasAnswerShown(data)) {
+                if(mHelpCounter<2) {
+                    mHelpCounter = 0;
+                    mHelpButton.setEnabled(false);
+                }
+                else {mHelpCounter--;}
+            }
+        }
     }
+
 
     //Переопределение обработчиков основных состояний нашей активности для записи меток об их прохождении в лог
     @Override
